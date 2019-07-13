@@ -21,6 +21,6 @@ var home = new Vue({
         buttonText: '',
       },
     },
-    aboutBlocks: []
+    aboutBlocks: [],
   },
 });
