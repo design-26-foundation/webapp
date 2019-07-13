@@ -23,7 +23,7 @@ function transformData (response) {
   }
 }
 
-const donate = new Vue({
+var donate = new Vue({
   el: '#donate-app',
   data: {
     banner: {
@@ -50,7 +50,7 @@ const donate = new Vue({
 });
 
 axios.get(ENDPOINTS.donate).then(function (res) {
-  const data = transformData(res.data);
+  var data = transformData(res.data);
 
   donate.banner = data.banner;
   donate.aboutBlocks = data.aboutBlocks;

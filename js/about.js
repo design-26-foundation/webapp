@@ -37,7 +37,7 @@ var about = new Vue({
 });
 
 axios.get(ENDPOINTS.about).then(function (res) {
-  const data = transformData(res.data);
+  var data = transformData(res.data);
 
   about.banner = data.banner;
   about.aboutBlocks = data.aboutBlocks;
