@@ -7,7 +7,7 @@ Vue.component('banner', {
       <div class="cta" :class="{ 'dark-cta': dark }">
         <h2>{{ data.heading }}</h2>
         <p>{{ data.text }}</p>
-        <button class="button button-pink">{{ data.buttonText }}</button>
+        <a class="button button-pink" :href="data.buttonUrl">{{ data.buttonText }}</a>
       </div>
     </article>
   `,

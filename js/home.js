@@ -9,7 +9,8 @@ function transformData (response) {
         image: response.acf.banner_image_left,
         heading: response.acf.banner_heading_left,
         text: response.acf.banner_text_left,
-        buttonText: response.acf.button_text_left,
+        buttonText: response.acf.button_text_text_left,
+        buttonUrl: response.acf.button_text_link_left,
       },
       right: {
         image: {
@@ -18,7 +19,8 @@ function transformData (response) {
         },
         heading: response.acf.banner_heading_right,
         text: response.acf.banner_text_right,
-        buttonText: response.acf.button_text_right,
+        buttonText: response.acf.button_text_text_right,
+        buttonUrl: response.acf.button_text_link_right,
       },
       aboutBlocks: response.acf.home_block_repeater.map(function (props) {
         return {
@@ -46,6 +48,7 @@ var home = new Vue({
         heading: '',
         text: '',
         buttonText: '',
+        buttonUrl: '',
       },
       right: {
         image: {
@@ -55,6 +58,7 @@ var home = new Vue({
         heading: '',
         text: '',
         buttonText: '',
+        buttonUrl: '',
       },
     },
     aboutBlocks: [],
