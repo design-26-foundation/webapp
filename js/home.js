@@ -1,4 +1,4 @@
-const home = new Vue({
+var home = new Vue({
   el: '#home-app',
   data: {
     banner: {
