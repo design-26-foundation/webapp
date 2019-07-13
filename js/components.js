@@ -4,7 +4,7 @@ Vue.component('banner', {
       <figure class="split-image">
         <img :src="data.image.url" :alt="data.image.text" />
       </figure>
-      <div class="cta dark-cta">
+      <div class="cta" :class="{ 'dark-cta': dark }">
         <h2>{{ data.heading }}</h2>
         <p>{{ data.text }}</p>
         <button class="button button-pink">{{ data.buttonText }}</button>
@@ -15,6 +15,9 @@ Vue.component('banner', {
     data: {
       type: Object,
       required: true,
+    },
+    dark: {
+      type: Boolean,
     }
   },
 });
