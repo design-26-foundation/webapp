@@ -3,13 +3,19 @@ var home = new Vue({
   data: {
     banner: {
       left: {
-        image: '',
+        image: {
+          url: '',
+          text: '',
+        },
         heading: '',
         text: '',
         buttonText: '',
       },
       right: {
-        image: '',
+        image: {
+          url: '',
+          text: '',
+        },
         heading: '',
         text: '',
         buttonText: '',
