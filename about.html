@@ -66,7 +66,7 @@
     <main>
       <section class="top-image">
         <figure class="top-image-figure">
-          <img :src="banner.image.url" alt="banner.image.text">
+          <img :src="banner.image.url" :alt="banner.image.text">
           <figcaption>
             <h1>
               {{ banner.heading }}
@@ -81,7 +81,7 @@
           <p>{{ content }}</p>
         </article>
         <figure class="about-image">
-          <img :src="image.url" alt="image.text">
+          <img :src="image.url" :alt="image.text">
         </figure>
       </section>
     </main>
