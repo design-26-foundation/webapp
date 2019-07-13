@@ -21,3 +21,21 @@ Vue.component('banner', {
     }
   },
 });
+
+Vue.component('stats', {
+  template: `
+    <section class="funding-info">
+      <article>
+        <div class="funding-info-block watch-video">
+          <img :src="data.image.url" :alt="data.image.text">
+        </div>
+        <div class="funding-info-block stats">
+          <h4>{{ data.header }}</h4>
+          <p>We've trained <span class="stats-actual">{{ data.number }}</span> young girls and can help many more.</p>
+          <a class="button" :href="data.buttonUrl">{{ data.buttonText }}</a>
+        </div>
+      </article>
+    </section>
+  `,
+
+});
