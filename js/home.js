@@ -30,7 +30,7 @@ var home = new Vue({
         },
         heading: '',
         text: '',
-        buttonText: 'Click me',
+        buttonText: '',
       },
       right: {
         image: {

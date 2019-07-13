@@ -65,8 +65,8 @@
     </header>
     <main>
       <section class="center-split">
-        <banner v-bind="{ data: banner.left }" />
-        <banner v-bind="{ data: banner.right }" />
+        <banner v-bind="{ data: banner.left }"></banner>
+        <banner v-bind="{ data: banner.right }"></banner>
       </section>
       <section v-for="({ title, content, image }, i) in aboutBlocks" :key="i" class="two-column-grid about-info">
         <article class="about-text">
