@@ -76,7 +76,7 @@
         </figure>
       </section>
       <section class="four-column-grid blog-landing">
-        <article v-for="({ title, content, buttonUrl, image }, i) in blogPosts" :key="i" class="blog-image">
+        <article v-for="({ title, content, buttonUrl, image, id }, i) in blogPosts" :key="i" class="blog-image">
           <figure>
             <img :src="image.url" :alt="image.text">
           </figure>
