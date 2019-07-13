@@ -65,26 +65,8 @@
     </header>
     <main>
       <section class="center-split">
-        <article>
-          <figure class="split-image">
-            <img :src="banner.left.image.url" :alt="banner.left.image.text" />
-          </figure>
-          <div class="cta dark-cta">
-            <h2>{{ banner.left.heading }}</h2>
-            <p>{{ banner.left.text }}</p>
-            <button class="button button-pink">{{ banner.left.buttonText }}</button>
-          </div>
-        </article>
-        <article>
-          <figure class="split-image">
-            <img :src="banner.right.image.url" :alt="banner.right.image.text" />
-          </figure>
-          <div class="cta dark-cta">
-            <h2>{{ banner.right.heading }}</h2>
-            <p>{{ banner.right.text }}</p>
-            <button class="button button-pink">{{ banner.right.buttonText }}</button>
-          </div>
-        </article>
+        <banner v-bind="{ data: banner.left }" />
+        <banner v-bind="{ data: banner.right }" />
       </section>
       <section v-for="({ title, content, image }, i) in aboutBlocks" :key="i" class="two-column-grid about-info">
         <article class="about-text">
