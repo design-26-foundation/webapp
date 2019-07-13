@@ -37,5 +37,10 @@ Vue.component('stats', {
       </article>
     </section>
   `,
-
+  props: {
+    data: {
+      type: Object,
+      required: true,
+    }
+  }
 });
