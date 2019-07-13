@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js" async></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <meta charset="utf-8">
   <title>Design26</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -45,7 +45,7 @@
   <div id="about-app" class="site-wrapper">
     <header class="top-header" id="js-header">
       <div class="header-elements">
-        <a class="logo" href="">
+        <a class="logo" href="/">
           <img src="/assets/img/design26foundation-logo.jpg" alt="Design 26 Foundation">
         </a>
         <nav id="nav-primary" class="navigation">
@@ -76,13 +76,24 @@
         </figure>
       </section>
       <section v-for="({ title, content, image }, i) in aboutBlocks" :key="i" class="two-column-grid about-info">
-        <article class="about-text">
-          <h2>{{ title }}</h2>
-          <p>{{ content }}</p>
-        </article>
-        <figure class="about-image">
-          <img :src="image.url" :alt="image.text">
-        </figure>
+        <template v-if="(i % 2)">
+          <article class="about-text">
+            <h2>{{ title }}</h2>
+            <p>{{ content }}</p>
+          </article>
+          <figure class="about-image">
+            <img :src="image.url" :alt="image.text">
+          </figure>
+        </template>
+        <template v-else>
+          <figure class="about-image">
+            <img :src="image.url" :alt="image.text">
+          </figure>
+          <article class="about-text">
+            <h2>{{ title }}</h2>
+            <p>{{ content }}</p>
+          </article>
+        </template>
       </section>
     </main>
     <footer class="main-footer"></footer>
