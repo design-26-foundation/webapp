@@ -51,7 +51,7 @@
         <nav id="nav-primary" class="navigation">
           <ul>
             <li class="nav-primary-item">
-              <a class="nav-primary-link current" href="/components/templates/home-page/">Home</a>
+              <a class="nav-primary-link current" href="/">Home</a>
             </li>
             <li class="nav-primary-item"><a class="nav-primary-link" href="/components/templates/our-impact/">Our impact</a></li>
             <li class="nav-primary-item"><a class="nav-primary-link" href="/components/templates/about-page/">About</a></li>
@@ -64,10 +64,31 @@
       </div>
     </header>
     <main>
-
+      <section class="top-image">
+        <figure class="top-image-figure">
+          <img :src="banner.image.url" :alt="banner.image.text">
+          <figcaption>
+            <h1>
+              {{ banner.heading }}
+            </h1>
+            <p>{{ banner.text }}</p>
+          </figcaption>
+        </figure>
+      </section>
+      <section v-for="({ title, content, image, buttonText, buttonUrl }, i) in aboutBlocks" class="two-column-grid about-info donate-page">
+        <article class="about-text">
+          <h2>{{ title }}</h2>
+          <p>{{ content }}</p>
+          <a class="button" :href="buttonUrl">{{ buttonText }}</a>
+        </article>
+        <figure class="about-image">
+          <img :src="image.url" :alt="image.text">
+        </figure>
+      </section>
     </main>
     <footer class="main-footer"></footer>
   </div>
+  <script src="/js/constants.js"></script>
   <script src="/js/donate.js"></script>
 </body>
 </html>
